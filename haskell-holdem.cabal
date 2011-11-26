@@ -37,6 +37,8 @@ Source-repository head
 Library
   Exposed-Modules:   HaskellHoldEm.Card
   Hs-Source-Dirs:    src
+  Build-Depends:     base >= 3 && < 5,
+                     haskell98
 
 
 Test-Suite test-haskell-holdem
@@ -54,5 +56,8 @@ Test-Suite test-haskell-holdem
 Executable haskell-holdem
   Main-Is:           HaskellHoldEm/Main.lhs
   Hs-Source-Dirs:    src
-  Build-Depends:     base >= 3 && < 5, haskell98
+  Build-Depends:     base >= 3 && < 5,
+                     haskell98,
+                     random,
+                     random-shuffle
   Other-Modules:     HaskellHoldEm.Card

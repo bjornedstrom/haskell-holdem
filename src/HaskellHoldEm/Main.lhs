@@ -3,18 +3,25 @@
 % Copyright (c) Björn Edström <be@bjrn.se> 2011
 
 \begin{code}
+import System.Random
+import System.Random.Shuffle
 import HaskellHoldEm.Card
 \end{code}
 
 \begin{code}
-hand = [Card Ace Hearts,
-        Card King Clubs,
-        Card Queen Diamonds,
-        Card Jack Spades,
-        Card (Rank 10) Hearts]
+unshuffled :: [Card]
+unshuffled = [Card rank suit |
+              suit <- [Spades,Hearts,Diamonds,Clubs],
+              rank <- [Ace,King,Queen,Jack,
+                       Rank 10,Rank 9,Rank 8,Rank 7,Rank 6,
+                       Rank 5,Rank 4,Rank 3,Rank 2]]
+
+-- |Return a shuffled list of cards
+deck :: (RandomGen gen) => gen -> [Card]
+deck gen = shuffle' unshuffled 52 gen
 
 main :: IO ()
-main = putStrLn . show . scoreHand . classify $ hand
+main = putStrLn . show $ (deck (mkStdGen 12321))
 \end{code}
 
 % ----- Configure Emacs -----
