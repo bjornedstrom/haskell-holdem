@@ -20,17 +20,17 @@ Build Source
 
 See dependencies in haskell-holdem.cabal
 
-  runhaskell Setup configure --enable-tests --user
-  runhaskell Setup build
-  runhaskell Setup test
-  runhaskell Setup install # optional
+    runhaskell Setup configure --enable-tests --user
+    runhaskell Setup build
+    runhaskell Setup test
+    runhaskell Setup install # optional
 
 Running Unit Tests
 ------------------
 
 Either do as described above, or
 
-  runhaskell -i./src -i./tests tests/Test.hs
+`runhaskell -i./src -i./tests tests/Test.hs`
 
 License
 -------
