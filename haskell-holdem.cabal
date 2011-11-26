@@ -1,0 +1,58 @@
+Name:                haskell-holdem
+Version:             0.0.79521
+Synopsis:            Texas Hold 'em game
+
+Description:
+    Haskell Hold 'em is a simple Texas Hold 'em game implemented as a
+    literate haskell program. It is mainly meant to be read to learn
+    the Texas Hold 'em-game, using code to specify the rules of the
+    game.
+
+Author:              Björn Edström
+Maintainer:          Björn Edström <be@bjrn.se>
+Copyright:           Copyright (c) 2011, Björn Edström
+License:             OtherLicense
+License-file:        LICENSE
+
+Stability:           experimental
+Category:            Game
+Build-Type:          Simple
+
+Homepage:            https://github.com/bjornedstrom/haskell-holdem
+Bug-Reports:         https://github.com/bjornedstrom/haskell-holdem/issues
+
+-- TODO: Fix so README is actually installed. Perhaps remove tests.
+Extra-source-files:  README.md,
+                     LICENSE,
+                     tests/*.lhs,
+                     tests/*.hs
+
+Cabal-Version:       >= 1.2
+
+Source-repository head
+  Type: git
+  Location: git://github.com/bjornedstrom/haskell-holdem.git
+
+
+Library
+  Exposed-Modules:   HaskellHoldEm.Card
+  Hs-Source-Dirs:    src
+
+
+Test-Suite test-haskell-holdem
+  Type:              exitcode-stdio-1.0
+  Main-Is:           CabalTest.hs
+  Hs-Source-Dirs:    src, tests
+  Build-depends:     base < 5.0,
+                     test-framework,
+                     test-framework-quickcheck2,
+                     test-framework-hunit,
+                     HUnit,
+                     QuickCheck
+
+
+Executable haskell-holdem
+  Main-Is:           HaskellHoldEm/Main.lhs
+  Hs-Source-Dirs:    src
+  Build-Depends:     base >= 3 && < 5, haskell98
+  Other-Modules:     HaskellHoldEm.Card
