@@ -1,3 +1,7 @@
+% This work is licensed under a Creative Commons
+% Attribution-ShareAlike 3.0 Unported License.
+% Copyright (c) Björn Edström <be@bjrn.se> 2011
+
 %% TODO: Perhaps move this to Main.lhs to get a nice polyglot. In that
 %% case it will be done when all code is written and in place.
 
