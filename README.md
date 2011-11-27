@@ -13,7 +13,7 @@ Haskell is a small city in Texas.
 Build Docs
 ----------
 
-TODO: How to generate LaTeX
+    latex article/haskell-holdem.lhs # may require multiple passes
 
 Build Source
 ------------
@@ -30,7 +30,7 @@ Running Unit Tests
 
 Either do as described above, or
 
-`runhaskell -i./src -i./tests tests/Test.hs`
+    runhaskell -i./src -i./tests tests/Test.hs
 
 License
 -------
