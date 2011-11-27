@@ -10,6 +10,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{verbatim}
+\usepackage{amsmath}
 
 %% TODO: Preferably use lhs2TeX or similar. The problem with lhs2Tex
 %% is that it does not handle Haddock style comments very well. For

@@ -94,15 +94,17 @@ suit of the cards.
 
 The different n-tuples, ordered by ranking, are:
 
-(straight flush, highest card)
-(four of a kind, card in four of a kind, kicker)
-(full house, card in three of a kind, card in two of a kind)
-(flush, highest card 1, highest card 2, ... highest card 5)
-(straight, highest card)
-(three of a kind, card in three of a kind, kicker 1, kicker 2)
-(two pair, card in best pair, card in second best pair, kicker)
-(one pair, card in pair, kicker 1, kicker 2, kicker 3)
-(highest card 1, highest card 2, ..., highest card 5)
+\begin{tabular}{l}
+$\langle$ straight flush, highest card $\rangle$ \\
+$\langle$ four of a kind, card in four of a kind, kicker $\rangle$ \\
+$\langle$ full house, card in three of a kind, card in two of a kind $\rangle$ \\
+$\langle$ flush, highest card 1, highest card 2, ..., highest card 5 $\rangle$ \\
+$\langle$ straight, highest card $\rangle$ \\
+$\langle$ three of a kind, card in three of a kind, kicker 1, kicker 2 $\rangle$ \\
+$\langle$ two pair, card in best pair, card in second best pair, kicker $\rangle$ \\
+$\langle$ one pair, card in pair, kicker 1, kicker 2, kicker 3 $\rangle$ \\
+$\langle$ highest card 1, highest card 2, ..., highest card 5 $\rangle$
+\end{tabular}
 
 ``Kicker'' is Poker terminology for the stray cards used to handle
 ties. For example, if two players have four-of-a-kind, the fifth card
