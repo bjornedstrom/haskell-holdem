@@ -226,15 +226,24 @@ The implementation of scoreHand is thus:
 -- |Score a hand of 5 cards. Four of a Kind will have a higher score
 -- than Flush, for example.
 scoreHand :: HandClass -> Score
-scoreHand (StraightFlush highest)        = listToScore $ [8] ++ map rankToInt [highest]
-scoreHand (FourOfAKind fourRank k)       = listToScore $ [7] ++ map rankToInt [fourRank,k]
-scoreHand (FullHouse threeRank twoRank)  = listToScore $ [6] ++ map rankToInt [threeRank,twoRank]
-scoreHand (Flush h1 h2 h3 h4 h5)         = listToScore $ [5] ++ map rankToInt [h1,h2,h3,h4,h5]
-scoreHand (Straight highest)             = listToScore $ [4] ++ map rankToInt [highest]
-scoreHand (ThreeOfAKind threeRank k1 k2) = listToScore $ [3] ++ map rankToInt [threeRank,k1,k2]
-scoreHand (TwoPair p1Rank p2Rank k)      = listToScore $ [2] ++ map rankToInt [p1Rank,p2Rank,k]
-scoreHand (OnePair pairRank k1 k2 k3)    = listToScore $ [1] ++ map rankToInt [pairRank,k1,k2,k3]
-scoreHand (HighestCard h1 h2 h3 h4 h5)   = listToScore $ [0] ++ map rankToInt [h1,h2,h3,h4,h5]
+scoreHand (StraightFlush highest)
+    = listToScore $ [8] ++ map rankToInt [highest]
+scoreHand (FourOfAKind fourRank k)
+    = listToScore $ [7] ++ map rankToInt [fourRank,k]
+scoreHand (FullHouse threeRank twoRank)
+    = listToScore $ [6] ++ map rankToInt [threeRank,twoRank]
+scoreHand (Flush h1 h2 h3 h4 h5)
+    = listToScore $ [5] ++ map rankToInt [h1,h2,h3,h4,h5]
+scoreHand (Straight highest)
+    = listToScore $ [4] ++ map rankToInt [highest]
+scoreHand (ThreeOfAKind threeRank k1 k2)
+    = listToScore $ [3] ++ map rankToInt [threeRank,k1,k2]
+scoreHand (TwoPair p1Rank p2Rank k)
+    = listToScore $ [2] ++ map rankToInt [p1Rank,p2Rank,k]
+scoreHand (OnePair pairRank k1 k2 k3)
+    = listToScore $ [1] ++ map rankToInt [pairRank,k1,k2,k3]
+scoreHand (HighestCard h1 h2 h3 h4 h5)
+    = listToScore $ [0] ++ map rankToInt [h1,h2,h3,h4,h5]
 \end{code}
 
 \subsection{Pretty Printing}
